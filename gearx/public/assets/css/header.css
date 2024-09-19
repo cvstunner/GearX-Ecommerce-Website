@@ -1,0 +1,50 @@
+header {
+  top: calc(-1 * var(--sec-nav-height)) !important;
+}
+
+#primary-nav {
+  height: var(--primary-nav-height) !important;
+}
+
+#sec-nav {
+  height: var(--sec-nav-height) !important;
+  background-color: var(--bg-primary) !important;
+}
+
+.nav-link {
+  color: var(--text-light) !important;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  cursor: pointer;
+  position: relative !important;
+}
+
+.nav-link::before {
+  content: '';
+  width: 50%;
+  height: 2px;
+  background: var(--fg-primary);
+  position: absolute;
+  left: 50%;
+  bottom: 2px;
+  /* Position it at the bottom of the link */
+  transform: translateX(-50%) scaleX(0);
+  /* Center and scale to 0 initially */
+  transform-origin: center;
+  /* Make it grow from the center */
+  transition: transform 0.3s ease;
+  /* Smooth transition */
+  pointer-events: none;
+}
+
+.nav-link.active>span {
+  color: var(--accent-2) !important;
+}
+
+.nav-link.active::before {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.nav-link:hover::before {
+  transform: translateX(-50%) scaleX(1);
+}

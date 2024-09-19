@@ -1,0 +1,15 @@
+:root {
+  --bg-primary: rgba(255, 255, 255, 1);
+  --bg-light: rgba(245, 245, 245, 1);
+
+  --fg-primary: #ED7B0E;
+
+  --text-light: rgba(245, 245, 245, 1);
+
+  --primary-nav-height: 100px;
+  --sec-nav-height: 40px;
+}
+
+.fg-primary {
+  color: var(--fg-primary) !important;
+}
