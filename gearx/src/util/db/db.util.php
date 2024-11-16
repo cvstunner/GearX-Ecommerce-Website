@@ -13,8 +13,8 @@ class Database
 
   private $host = 'localhost';
   private $dbname = 'GearX';
-  private $user = 'cvstunner';
-  private $password = 'Chet@n777';
+  private $user = 'root';
+  private $password = '';
 
   private function __construct()
   {
@@ -23,8 +23,6 @@ class Database
     // $this->user = getenv('DB_USER');
     // $this->password = getenv('DB_PASS');
     try {
-      // echo "<script>console.log('user: '" . $this->user . ")</script>";
-
       $dsn = "mysql:host={$this->host};dbname={$this->dbname}";
       $options = [
         PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
